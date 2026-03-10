@@ -1,8 +1,26 @@
 package model;
 
-public class Student {
+public class Student extends Person {
 
-    private String id;
-    private String name;
+    private String birthDate;
 
+    public Student() {
+        super();
+    }
+
+    public Student(String userId, String code, String documentNumber,
+                   String firstName, String lastName, String status,
+                   String birthDate) {
+
+        super(userId, code, documentNumber, firstName, lastName, status);
+        this.birthDate = birthDate;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
 }
